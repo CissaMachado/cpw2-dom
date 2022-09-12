@@ -28,15 +28,10 @@ function show(){
       * e o sobrenome de uma pessoa (separado por um espaço) na div id='result'
       */
 
-     var name= document.getElementById('fname');
-     var last = document.getElementById('lname');
-     var res = document.getElementById('result');
+     const name= document.getElementById('fname').value;
+     const last = document.getElementById('lname').value;
+     document.getElementById('result').innerHTML = ` ${name}  ${last} `;
 
-     var n1 = String(name.value);
-     var n2 = String(last.value);
-
-    
-     res.innerHTML = ` ${n1}  ${n2} `;
 
 
 
