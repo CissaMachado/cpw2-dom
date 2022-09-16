@@ -61,10 +61,16 @@ function search(){
      *
      * Além disso, a função removeAllChildren abaixo também pode ser útil para o desenvolvimento da solução
      */
-    var nome = document.getElementById('name').value;
-    var retorno = document.getElementById('search');
 
-    retorno.innerHTML = data;
+     let searchName = document.getElementById('name').value;
+     let searchDiv = document.getElementById('search');
+     let t = '';
+     data.forEach(person => {
+          if(person.name.toLowerCase().substr(0, searchName.length).indexOf(`${searchName.toLowerCase()}`) > -1){
+             t += `<div>${person.name}</div>`;
+         }
+     });
+     document.getElementById('search').innerHTML = t;
 
     
    
